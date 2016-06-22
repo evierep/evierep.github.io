@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>Wedding</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/main.css">	
+	<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css">
+    <link rel="stylesheet" type="text/css" href="css/bird.css"> 
+    <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script> 
+	</head> 
+
+<body ng-app="formSimple">
+
+<div class='hold'>
+<div class="bird">
+  <div class="bird-body"></div>
+  <div class="bird-wings"></div>
+  <div class="bird-back"></div>
+  <div class="bird-nose"></div>
+  <div class="bird-eye"></div>
+  <div class="bird-tail"></div>
+</div>
+</div> 
+
+
+    <ul class="slides">
+        <li> <img src="img/main/img1.jpg" alt='first'/> </li>
+        <li> <img src="img/main/img2.jpg" alt='second'/> </li>
+        <li> <img src="img/main/img3.jpg" alt='third'/>  </li>
+        <li> <img src="img/main/img4.jpg" alt='third'/>  </li>
+    </ul>
+
+<header>
+	<div class="sticky-nav">
+   <a class="back" href="../index.html"><img src="img/icon/back.png" alt="back"> </a>
+        <div id="logo">
+        	<a href="#" title="wedding"></a>
+        </div>
+ 
+		<nav id='menu'> 
+			<ul id='menu-nav'>
+				<li id='current'> <a> Home </a> </li>
+				<li> <a> Our history </a> </li>
+				<li> <a> Portfolio </a> </li>
+				<li> <a> Services </a> </li>
+			<ul>  
+		</nav>
+
+	</div> 
+</header>  
+
+<div class="container">
+
+<div class='page'> 
+	<div class="row">
+            <div class="col-md-12">
+            	<div class="title-page">
+                    <h2 class="title">Our mission</h2>
+                    <h3 class="title-description">Love what you do, Do what you love</h3>
+                </div> 
+            </div> 
+ 	</div>   
+
+
+	<div class="row">
+
+        <aside class="col-md-3">
+			<nav class="work-nav"> 
+				<ul id="filters" class="option-set"> 
+					<li> <a data-filter="*" class="selected"> All photos </a> </li>
+					<li> <a data-filter="#design"> Design </a> </li>
+					<li> <a data-filter="#flower"> Flowers </a> </li>
+					<li> <a data-filter="#dress"> Dresses </a> </li>
+					<li> <a data-filter="#cake"> Cakes </a> </li> 
+				</ul> 
+			 </nav>
+		</aside> 	
+ 
+
+  <div class="col-md-9">
+		<div class="row">
+			<ul class='preview'> 
+
+			<li class="item-preview col-md-3" id='design'> 
+				<a class='fancybox hover-wrap' data-fancybox-group="gallery" href="img/grid/idea-01.jpg" title="Beautiful and stylish design"> 
+				<span class='hover-wrap'>
+				<span class="overlay-img"></span> 
+				<span class="overlay-img-thumb"><img src="img/icon/plus.png"></span>
+				</span> 
+				</a>
+				<img src='img/grid/idea-01.jpg' alt='1st work' /> 
+			</li> 
+ 			
+ 			<li class="item-preview col-md-3" id='design'> 
+				<a class='fancybox' data-fancybox-group="gallery" href="img/grid/idea-02.jpg" title="Beautiful and stylish design"> 
+				<span class='hover-wrap'> 
+				<span class="overlay-img"></span>
+				<span class="overlay-img-thumb"><img src="img/icon/plus.png"></span>
+				</span> 
+				</a> 
+				<img src='img/grid/idea-02.jpg' alt='2nd work' /> 
+			</li> 
+
+			<li class="item-preview col-md-3" id='design'> 
+				<a class='fancybox' data-fancybox-group="gallery" href="img/grid/idea-03.jpg" title="Beautiful and stylish design"> 
+				<span class='hover-wrap'> 
+				<span class="overlay-img"></span>
+				<span class="overlay-img-thumb"><img src="img/icon/plus.png"></span>
+				</span> 
+				</a> 
+				<img src='img/grid/idea-03.jpg' alt='3d work' /> 
+			</li> 
+
+			<li class="item-preview col-md-3" id='cake'> 
+				<a class='fancybox' data-fancybox-group="gallery" href="img/grid/idea-04.jpg" title="Perfect cake for wedding"> 
+				<span class='hover-wrap'> 
+				<span class="overlay-img"></span>
+				<span class="overlay-img-thumb"><img src="img/icon/plus.png"></span>
+				</span> 
+				</a> 
+				<img src='img/grid/idea-04.jpg' alt='4 work' /> 
+			</li> 
+
+			<li class="item-preview col-md-3" id='cake'> 
+				<a class='fancybox' data-fancybox-group="gallery"href="img/grid/idea-05.jpg" title="Perfect cake for wedding"> 
+				<span class='hover-wrap'> 
+				<span class="overlay-img"></span>
+				<span class="overlay-img-thumb"><img src="img/icon/plus.png"></span>
+				</span> 
+				</a> 
+				<img src='img/grid/idea-05.jpg' alt='5 work' /> 
+			</li> 
+
+			<li class="item-preview col-md-3" id='flower'> 
+				<a class='fancybox' data-fancybox-group="gallery" href="img/grid/idea-06.jpg" title="Vintage inspired silk wedding bouquet "> 
+				<span class='hover-wrap'> 
+				<span class="overlay-img"></span>
+				<span class="overlay-img-thumb"><img src="img/icon/plus.png"></span>
+				</span> 
+				</a> 
+				<img src='img/grid/idea-06.jpg' alt='6 work' /> 
+			</li> 
+
+			<li class="item-preview col-md-3" id='flower'> 
+				<a class='fancybox' data-fancybox-group="gallery" href="img/grid/idea-07.jpg" title="Vintage inspired silk wedding bouquet "> 
+				<span class='hover-wrap'> 
+				<span class="overlay-img"></span>
+				<span class="overlay-img-thumb"><img src="img/icon/plus.png"></span>
+				</span> 
+				</a> 
+				<img src='img/grid/idea-07.jpg' alt='7 work' /> 
+			</li> 
+
+			<li class="item-preview col-md-3" id='dress'> 
+				<a class='fancybox' data-fancybox-group="gallery" href="img/grid/idea-08.jpg" title="Designer and affordable wedding dresses in every style and silhouette"> 
+				<span class='hover-wrap'> 
+				<span class="overlay-img"></span>
+				<span class="overlay-img-thumb"><img src="img/icon/plus.png"></span>
+				</span> 
+				</a> 
+				<img src='img/grid/idea-08.jpg' alt='8 work' /> 
+			</li> 
+
+			<li class="item-preview col-md-3" id='dress'> 
+				<a class='fancybox' data-fancybox-group="gallery" href="img/grid/idea-09.jpg" title="Designer and affordable wedding dresses in every style and silhouette"> 
+				<span class='hover-wrap'> 
+				<span class="overlay-img"></span>
+				<span class="overlay-img-thumb"><img src="img/icon/plus.png"></span>
+				</span> 
+				</a> 
+				<img src='img/grid/idea-09.jpg' alt='9 work' /> 
+			</li> 
+		</ul> 
+		</div> 	
+	</div> 
+</div> 
+</div> 	
+
+<div class='profile'> 
+
+	<div class="row">
+        <div class="span12">
+            <div class="title-page">
+                <h2 class="title">Our team</h2>
+                <h3 class="title-description">Best team ever</h3>
+            </div>
+        </div>
+    </div>
+
+
+<div class="row">
+
+	<div class="col-md-4">
+		<div class='profile-wrap'>
+		<div class="hover-wrap">
+            <span class="overlay-img"></span>
+            <span class="overlay-text">Florist</span>
+        </div>
+        <img src='img/member/member1.jpg' alt='Kate' />
+    </div> 
+	<h5 class='profile-name'> Kate </h5> 
+	<p class='profile-description'> Floral designers may create a single arrangement for a special occasion or design floral displays for rooms and open spaces for large scale functions, such as weddings, funerals, and banquets. They use their sense of artistry and knowledge of different types of flowers to choose the appropriate flowers for each occasion. </p> 
+</div> 
+
+<div class="col-md-4">
+	<div class='profile-wrap'>
+	<div class="hover-wrap">
+            <span class="overlay-img"></span>
+            <span class="overlay-text">Event manager</span>
+        </div>
+	<img src='img/member/member2.jpg' alt='Sarah' />
+</div>
+	<h5 class='profile-name'> Sarah</h5> 
+	<p class='profile-description'> The role of event organiser is hands-on and often involves working as part of a team. Event organisers must be able to complete a wide range of activities requiring clear communication, excellent organisational skills and attention to detail. </p> 
+
+</div> 
+
+<div class="col-md-4">
+	<div class='profile-wrap'>
+	<div class="hover-wrap">
+            <span class="overlay-img"></span>
+            <span class="overlay-text">Photographer</span>
+        </div>
+	<img src='img/member/member3.jpg' alt='Peter' />
+</div>
+	<h5 class='profile-name'> Peter </h5> 
+	<p class='profile-description'> Photographers create permanent visual images for an exceptional range of creative, technical and documentary purposes. A professional photographer usually works to a brief set by the client or employer. Examples of image content include wedding, family and baby photographs, fashion, food, architecture and landscapes. </p> 
+	
+</div> 
+
+
+</div> 
+</div> 
+
+<div class='contact'>
+	<div class="row">
+        <div class="col-md-12">
+            <div class="title-page">
+                <h2 class="title">Contact us</h2>
+                <h3 class="title-description">Planning a wedding? Need any help? Contact us!</h3>
+            </div>
+        </div>
+    </div>
+
+	<div class="row">
+		<div class="col-md-9">
+		<div ng-controller="SimpleController">
+        	<form id="contact-form" class="contact-form" name="form" novalidate>
+
+            	<span class="contact-name">
+            		<input type="text" placeholder="Full Name" ng-model="user.name" name="uName" required>
+            		<div ng-show="form.$submitted || form.uName.$touched">
+      				<div ng-show="form.uName.$error.required">Please, tell us your name</div>
+    				</div>	
+                </span>
+
+                <span class="contact-email">
+                	<input type="text" placeholder="Email Address" ng-model="user.email" name="uEmail" required>
+                	<div ng-show="form.$submitted || form.uEmail.$touched">
+     			 <div ng-show="form.uEmail.$error.required">Please, tell us your email</div>
+      			<div ng-show="form.uEmail.$error.email">This is not a valid email</div>
+    			</div>
+                </span>
+
+                <span class="contact-message">
+                	<textarea id="contact_message" placeholder="Your Message" name="message" rows="15" cols="40"></textarea>
+                </span>
+
+                <span ng-click="update(user)" class="contact-submit">
+                	<input type="button" class="submit" value='Send Your Email'>
+                </span>
+            </form>
+        </div>
+    </div> 
+        
+        <div class="col-md-3">
+        	<div class="contact-details">
+        		<h3>Contact Details</h3>
+                <ul>
+                    <li><a href="#">hello@wedding_agency.com.ua</a></li>
+                    <li>(044) 555-7754</li>
+                    <li>
+                        One and Only wedding agency
+                        <br>
+                        Khreshatik str, 7
+                        <br>
+                        Kiev
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+	
+	<div id="social-area">
+    	<div class="row">
+            <div class="col-md-12">
+            	<ul> 
+            		<li><a> <img src='img/icon/facebook.png'/> </a></li> 
+            		<li><a> <img src='img/icon/instagram.png'/> </a></li> 
+            	</ul>
+            </div>
+        </div> 
+    </div> 
+
+
+<footer> 
+	<p class="credits">&copy;2016 One and Only Wedding agency</p>
+</footer> 
+
+
+
+</div> 
+
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src='js/form.js'></script>
+<script src="js/responsiveslides.min.js"></script>
+<script src='js/index.js'></script>
+<script src="js/noframework.waypoints.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src='js/jquery.isotope.js'></script>
+<script src='fancybox/jquery.fancybox.js'></script>
+<script src='fancybox/jquery.fancybox.pack.js'></script>
+
+
+
+</body>
+</html>		

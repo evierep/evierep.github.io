@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="UTF-8">
+    <title>Поиск рецептов</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/bird.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+   </head>
+
+<body>
+
+<div class='hold'>
+<div class="bird">
+  <div class="bird-body"></div>
+  <div class="bird-wings"></div>
+  <div class="bird-back"></div>
+  <div class="bird-nose"></div>
+  <div class="bird-eye"></div>
+  <div class="bird-tail"></div>
+</div>
+</div>
+
+
+<nav> 
+	<a class="back" href="../index.html"><img src="img/back.png" alt="back"> </a>
+	<div id="logo">
+		<a href="#"> </a>
+	</div>
+</nav>
+
+  <div ng-controller="SidebarController" class="sidebar" sidebar-directive="state">
+      <a href="#" id="navigation-toggle" ng-click="toggleState()">Меню</a>
+          <ul class="navigation">
+            <li class="navigation-items"> <a href="#">Рецепты</a> </li>
+            <li class="navigation-items"> <a href="#">Напитки</a> </li>
+            <li class="navigation-items"> <a href="#">Советы</a> </li>
+            <li class="navigation-items"> <a href="#">Калорийность</a> </li>
+            <li class="navigation-items"> <a href="#">Для детей</a> </li>
+          </ul>
+     </div>
+
+
+
+<div class="container">
+
+<div class="filters">
+
+  <div class="ui-group">
+    <h5>Категория блюда</h5>
+    <div class="button-group js-radio-button-group" data-filter-group="cookType">
+      <button class="button is-checked btn btn-default" data-filter="">все</button>
+      <button class="button btn btn-default" data-filter=".main">основные</button>
+      <button class="button btn btn-default" data-filter=".breakfast">завтрак</button>
+      <button class="button btn btn-default" data-filter=".dessert">десерт</button>
+      <button class="button btn btn-default" data-filter=".garnir">гарнир</button>
+      <button class="button btn btn-default" data-filter=".zakuska">закуска</button>
+    </div>
+  </div>
+
+  <div class="ui-group">
+    <h5>Время приготовления</h5>
+    <div class="button-group js-radio-button-group" data-filter-group="cookTime">
+      <button class="button btn btn-default is-checked" data-filter="">все</button>
+      <button class="button btn btn-default" data-filter=".fast">20 минут</button>
+      <button class="button btn btn-default" data-filter=".medium">45 минут</button>
+      <button class="button btn btn-default" data-filter=".long">60 минут</button>
+    </div>
+  </div>
+
+  <div class="ui-group">
+    <h5>Основные продукты</h5>
+    <div class="button-group js-radio-button-group" data-filter-group="cookProducts">
+      <button class="button btn btn-default is-checked" data-filter="">все</button>
+      <button class="button btn btn-default" data-filter=".meat">мясо</button>
+      <button class="button btn btn-default" data-filter=".fish">рыба</button>
+      <button class="button btn btn-default" data-filter=".milk">молочные продукты</button>
+      <button class="button btn btn-default" data-filter=".grain">крупы и макароны</button>
+      <button class="button btn btn-default" data-filter=".veg">овощи</button>
+      <button class="button btn btn-default" data-filter=".fruit">фрукты</button>
+      <button class="button btn btn-default" data-filter=".bread">хлеб</button>
+      <button class="button btn btn-default" data-filter=".eggs">яйца</button>
+    </div>
+  </div>
+  
+  <div class="button-group js-radio-button-group" data-filter-group="cookProducts">
+  <button class="button-reset btn btn-default">Сбросить</button>
+  </div>
+
+</div>
+
+
+
+<div class="grid">
+	<div class="grid-sizer"></div>
+    
+		<div class="grid-item main long meat">
+			<img src="img/chicken.jpg" alt="курица">
+				<div class="caption">
+					<h3>Куриное филе в духовке</h3>
+						<p>Простой и понятный рецепт приготовления этого блюда</p>
+                        <p><a class="learn-more">Читать дальше</a></p>
+                 </div>
+		</div> 
+        <div class="popup">
+      		<img src="img/chicken.jpg" alt="курица">
+                 <h3>Куриное филе в духовке</h3>
+                     <ul>
+                        <li> курица </li>
+                        <li> мед </li>
+                        <li> специи </li>
+                      </ul>
+                  <p>Простой и понятный рецепт приготовления этого блюда</p>
+                  <span class="popup-btn-close">x</span>	
+		</div>
+            
+		<div class="grid-item main long meat grain">
+			<img src="img/chicken-rice.jpg" alt="рис с курицей">
+				<div class="caption">
+					<h3>Рис с курицей</h3>
+						<p>Простой и понятный рецепт приготовления этого блюда</p>
+							<p><a class="learn-more">Читать дальше</a></p>
+				</div>
+		</div>
+		<div class="popup">
+      		<img src="img/chicken-rice.jpg" alt="рис с курицей">
+                 <h3>Рис с курицей</h3>
+                   <ul>
+                    	<li> курица </li>
+                   		<li> рис </li>
+                    	<li> специи </li>
+                    </ul>
+                     	<p>Простой и понятный рецепт приготовления этого блюда</p>
+                     	<span class="popup-btn-close">x</span>
+		</div>
+
+		<div class="grid-item breakfast fast milk eggs">
+			<img src="img/pancakes.jpg" alt="панкейки">
+				<div class="caption">
+					<h3>Панкейки</h3>
+						<p>Простой и понятный рецепт приготовления этого блюда</p>
+							<p><a class="learn-more">Читать дальше</a></p>
+				</div>
+		</div>
+        <div class="popup">
+      		<img src="img/pancakes.jpg" alt="панкейки">
+               <h3>Панкейки</h3>
+                 <ul>
+                    <li> молоко </li>
+                    <li> мука </li>
+                    <li> яйца </li>
+                  </ul>
+                  <p>Простой и понятный рецепт приготовления этого блюда</p>
+                  <span class="popup-btn-close">x</span>
+		</div>
+
+		<div class="grid-item dessert medium milk grain">
+			<img src="img/rice-pudding.jpg" alt="рисовый пудинг">
+				<div class="caption">
+					<h3>Рисовый пудинг</h3>
+					<p>Простой и понятный рецепт приготовления этого блюда</p>
+					<p><a class="learn-more">Читать дальше</a></p>
+				</div>
+		</div>
+        <div class="popup">
+      		<img src="img/rice-pudding.jpg" alt="рисовый пудинг">
+                 <h3>Рисовый пудинг</h3>
+                    <ul>
+                      <li> рис </li>
+                      <li> молоко </li>
+                      <li> сахар </li>
+                     </ul>
+                    <p>Простой и понятный рецепт приготовления этого блюда</p>
+                    <span class="popup-btn-close">x</span>
+       </div>
+        
+		<div class="grid-item garnir fast veg">
+			<img src="img/salad.jpg" alt="салат">
+				<div class="caption">
+					<h3>Салат</h3>
+					<p>Простой и понятный рецепт приготовления этого блюда</p>
+					<p><a class="learn-more">Читать дальше</a></p>
+				</div>
+		</div> 
+        <div class="popup">
+  			<img src="img/salad.jpg" alt="салат">
+               <h3>Салат</h3>
+                	<ul>
+                    	<li> огурцы</li>
+                        <li> помидоры </li>
+                        <li> зелень </li>
+                    </ul>
+                   	<p>Простой и понятный рецепт приготовления этого блюда</p> 
+    				<span class="popup-btn-close">x</span>
+		</div>
+        
+
+		<div class="grid-item zakuska fast bread">
+			<img src="img/sandwich.jpg" alt="сэндвич">
+				<div class="caption">
+					<h3>Сэндвич</h3>
+					<p>Простой и понятный рецепт приготовления этого блюда</p>
+					<p><a class="learn-more">Читать дальше</a></p>
+				</div>
+		</div> 
+  		<div class="popup">
+    		<img src="img/sandwich.jpg" alt="сэндвич">
+               <h3>Сэндвич</h3>
+                   <ul>
+                   		<li> хлеб</li>
+                        <li> сыр </li>
+                        <li> ветчина </li>
+                   </ul>
+                   <p>Простой и понятный рецепт приготовления этого блюда</p>
+                   <span class="popup-btn-close">x</span>
+		</div>
+
+		<div class="grid-item breakfast fast eggs">
+			<img src="img/scrambled-eggs.jpg" alt="яичница">
+				<div class="caption">
+					<h3>Яичница</h3>
+					<p>Простой и понятный рецепт приготовления этого блюда</p>
+					<p><a class="learn-more">Читать дальше</a></p>
+				</div>
+		</div>
+        <div class="popup">
+    		<img class="img-description" src="img/scrambled-eggs.jpg" alt="яичница">
+                 <h3>Яичница</h3>
+                 	<ul>
+                        <li> хлеб</li>
+                        <li> яйца </li>
+                        <li> зелень </li>
+                    </ul>
+                    <p>Простой и понятный рецепт приготовления этого блюда</p>
+                   <span class="popup-btn-close">x</span>
+  		</div>
+		
+		<div class="grid-item main medium veg">
+				<img src="img/tomato-soup.jpg" alt="томатный суп">
+					<div class="caption">
+						<h3>Томатный суп</h3>
+						<p>Простой и понятный рецепт приготовления этого блюда</p>
+						<p><a class="learn-more">Читать дальше</a></p>
+					</div>
+		</div>
+        <div class="popup">
+      		<img src="img/tomato-soup.jpg" alt="томатный суп">
+            	<h3>Томатный суп</h3>
+                <ul>
+                	<li> помидоры </li>
+                    <li> лук </li>
+                    <li> чеснок </li>
+                </ul>
+                <p>Простой и понятный рецепт приготовления этого блюда</p>
+                <span class="popup-btn-close">x</span>
+  		</div>
+
+		<div class="grid-item main medium fish">
+			<img src="img/salmon.jpg" alt="филе лосося">
+				<div class="caption">
+					<h3>Филе лосося</h3>
+					<p>Простой и понятный рецепт приготовления этого блюда</p>
+					<p><a class="learn-more">Читать дальше</a></p>
+				</div>
+		</div>
+        <div class="popup">
+        	<img src="img/salmon.jpg" alt="филе лосося">
+            <h3>Филе лосося</h3>
+            <ul>
+            	<li> лосось </li>
+                <li> болгарский перец </li>
+                <li> специи </li>
+            </ul>
+            <p>Простой и понятный рецепт приготовления этого блюда</p>
+            <span class="popup-btn-close">x</span>
+		</div>
+
+		<div class="grid-item garnir fast veg fish">
+			<img src="img/salmon-salad.jpg" alt="салат с лососем">
+				<div class="caption">
+					<h3>Салат с лососем</h3>
+					<p>Простой и понятный рецепт приготовления этого блюда</p>
+					<p><a class="learn-more">Читать дальше</a></p>
+				</div>
+		</div>
+        <div class="popup">
+      		<img src="img/salmon-salad.jpg" alt="салат с лососем">
+            <h3>Салат с лососем</h3>
+            <ul>
+            	<li> листья салата </li>
+                <li> лосось </li>
+               	<li> пармезан </li>
+            </ul>
+            <p>Простой и понятный рецепт приготовления этого блюда</p>
+           	<span class="popup-btn-close">x</span>
+		</div>
+
+		<div class="grid-item main long grain">
+			<img src="img/carbonara.jpg" alt="карбонара">
+				<div class="caption">
+					<h3>Паста карбонара</h3>
+					<p>Простой и понятный рецепт приготовления этого блюда</p>
+					<p><a class="learn-more">Читать дальше</a></p>
+				</div>
+		</div>
+        <div class="popup">
+    		<img src="img/carbonara.jpg" alt="карбонара">
+            <h3>Паста карбонара</h3>
+            <ul>
+            	<li> макароны </li>
+                <li> сливочное масло </li>
+                <li> сыр </li>
+            </ul>
+            <p>Простой и понятный рецепт приготовления этого блюда</p>
+  			<span class="popup-btn-close">x</span>
+		</div>
+
+		<div class="grid-item dessert fast fruit">
+			<img src="img/fruit-salad.jpg" alt="фруктовый салат">
+				<div class="caption">
+					<h3>Фруктовый салат</h3>
+					<p>Простой и понятный рецепт приготовления этого блюда</p>
+					<p><a class="learn-more">Читать дальше</a></p>
+				</div>
+		</div>
+        <div class="popup">
+    		<img src="img/fruit-salad.jpg" alt="фруктовый салат">
+            <h3>Фруктовый салат</h3>
+            <ul>
+            	<li> киви </li>
+                <li> клубника </li>
+                <li> яблоко </li>
+            </ul>
+            <p>Простой и понятный рецепт приготовления этого блюда</p>
+  			<span class="popup-btn-close">x</span>
+		</div>
+
+		<div class="grid-item zakuska breakfast fast bread">
+			<img src="img/hot-sandwich.jpg" alt="горячие бутерброды">
+				<div class="caption">
+					<h3>Горячие бутерброды</h3>
+					<p>Простой и понятный рецепт приготовления этого блюда</p>
+					<p><a class="learn-more">Читать дальше</a></p>
+				</div>
+		</div>
+        <div class="popup">
+    		<img src="img/hot-sandwich.jpg" alt="горячие бутерброды">
+            <h3>Горячие бутерброды</h3>
+            <ul>
+            	<li> хлеб </li>
+                <li> сыр </li>
+                <li> яйцо </li>
+            </ul>
+            <p>Простой и понятный рецепт приготовления этого блюда</p>
+  			<span class="popup-btn-close">x</span>
+		</div>
+
+		<div class="grid-item dessert long milk eggs">
+			<img src="img/napoleon.jpg" alt="наполеон">
+				<div class="caption">
+					<h3>Наполеон</h3>
+					<p>Простой и понятный рецепт приготовления этого блюда</p>
+					<p><a class="learn-more">Читать дальше</a></p>
+				</div>
+		</div>
+        <div class="popup">
+    		<img src="img/napoleon.jpg" alt="наполеон">
+            <h3>Наполеон</h3>
+            <ul>
+            	<li> мука </li>
+                <li> сливочное масло </li>
+                <li> яйцо </li>
+             </ul>
+            <p>Простой и понятный рецепт приготовления этого блюда</p>
+  			<span class="popup-btn-close">x</span>
+		</div>
+
+		<div class="grid-item breakfast fast grain">
+			<img src="img/ovsianka.jpg" alt="овсянка">
+				<div class="caption">
+					<h3>Овсянка</h3>
+					<p>Простой и понятный рецепт приготовления этого блюда</p>
+					<p><a class="learn-more">Читать дальше</a></p>
+				</div>
+		</div>
+        <div class="popup">
+    		<img rc="img/ovsianka.jpg" alt="овсянка">
+            <h3>Овсянка</h3>
+            <ul>
+            	<li> овсяные хлопья </li>
+                <li> молоко</li>
+                <li> сахар </li>
+            </ul>
+            <p>Простой и понятный рецепт приготовления этого блюда</p>
+  			<span class="popup-btn-close">x</span>
+		</div>
+
+		<div class="grid-item garnir medium veg">
+			<img src="img/potatoes.jpg" alt="картофель">
+				<div class="caption">
+					<h3>Картофель</h3>
+					<p>Простой и понятный рецепт приготовления этого блюда</p>
+					<p><a class="learn-more">Читать дальше</a></p>
+				</div>
+		</div>
+        <div class="popup">
+        	<img src="img/potatoes.jpg" alt="картофель">
+            <h3>Картофель</h3>
+            <ul>
+            	<li> картофель </li>
+                <li> чеснок </li>
+               	<li> оливковое масло </li>
+            </ul>
+            <p>Простой и понятный рецепт приготовления этого блюда</p>
+  			<span class="popup-btn-close">x</span>
+		</div>
+
+
+		
+ 
+  
+                   
+</div>             
+</div>
+
+
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src='http://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js'></script>
+<script src='http://npmcdn.com/imagesloaded@4/imagesloaded.pkgd.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js'></script>
+<script src="js/noframework.waypoints.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/menu.js"></script>
+
+
+    
+    
+  </body>
+</html>
